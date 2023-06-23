@@ -31,6 +31,10 @@ inquirer
     /*require('fs').createWriteStream('i_love_qr.png') creates a writable stream using the createWriteStream()
      method from the built-in Node.js module fs (file system). It specifies the file path and name as 'i_love_qr.png'.
      This means the QR code image will be saved to a file named i_love_qr.png in the current working directory. */
+    fs.writeFile("himanshu.txt",i,(err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+      }); 
   })
   .catch((error) => {
     if (error.isTtyError) {
